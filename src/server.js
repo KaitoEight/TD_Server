@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 .catch((err) => console.error('MongoDB connection error:', err));
 
 // Routes
-const todoRoutes = require('../routes/todoRoutes');
+const todoRoutes = require('./routes/todoRoutes');
 app.use('/api/todos', todoRoutes);
 
 app.listen(port, () => {
